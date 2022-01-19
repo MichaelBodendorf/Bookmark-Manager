@@ -15,3 +15,14 @@ describe '#list' do
   end
 end
 
+describe '#add' do
+ it 'add a bookmark' do
+  Bookmark.add('http://example.com')
+
+  connection = PG.connect(dbname: 'bookmark_manager_test')
+  response = connection.exec("SELECT id, url FROM bookmarks WHERE url='http://example.com';")
+
+  expect(response.count).not_to eq(0)
+ end
+end
+

@@ -32,3 +32,9 @@ Create test Database:
 * Create the database using the psql command CREATE DATABASE bookmark_manager_test;
 * Connect to the database using the pqsl command \c bookmark_manager_test;
 * Run the query we have saved in the file 01_create_bookmarks_table_test.sql
+
+User story #2
+
+As a user
+So that I can save new websites that I find
+I want to be able to add them to my bookmarks
